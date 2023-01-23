@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func addtion(a, b int) int {
+func addition(a, b int) int {
 	return a + b
 }
 
@@ -20,27 +20,32 @@ func division(a, b int) int {
 	return a / b
 }
 
-func validate(a, b int) int {
+func validate(a, b int) string {
+	if a == b {
+		return "equal numbers"
+	}
+
+	return fmt.Sprintf("%v The Number Major Is:", mayor(a, b))
+
+}
+
+func mayor(a, b int) int {
 	if a > b {
 		return a
 	}
 	return b
-
 }
 
 func calculate(a, b int) {
-	addtion := addtion(a, b)
+
+	addition := addition(a, b)
 	subtraction := subtraction(a, b)
 	multiplication := multiplication(a, b)
 	division := division(a, b)
-	validate := validate(a, b)
-
-	fmt.Printf("Addition: %v, Subtraction: %v, Multiplication: %v, Division  %v, The Number Major Is: %v\n ", addtion, subtraction, multiplication, division, validate)
-
+	fmt.Printf("Addition: %v, Subtraction: %v, Multiplication: %v, Division: %v \n", addition, subtraction, multiplication, division)
+	fmt.Println(validate(a, b))
 }
 
 func main() {
-	calculate(5, 5)
-	calculate(5, 4)
-
+	calculate(9, 5)
 }
