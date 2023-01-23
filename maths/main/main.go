@@ -25,11 +25,11 @@ func validate(a, b int) string {
 		return "equal numbers"
 	}
 
-	return fmt.Sprintf("%v The Number Major Is:", mayor(a, b))
+	return fmt.Sprintf("The greater of %v and %v, is: %v", a, b, greater(a, b))
 
 }
 
-func mayor(a, b int) int {
+func greater(a, b int) int {
 	if a > b {
 		return a
 	}
@@ -48,4 +48,5 @@ func calculate(a, b int) {
 
 func main() {
 	calculate(9, 5)
+
 }
