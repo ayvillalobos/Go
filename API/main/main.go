@@ -3,15 +3,20 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-
 	"io"
 	"log"
 	"net/http"
 )
 
 type Response struct {
-	Hdurl string `json: hdurl`
-	Date  string `json: date`
+	Copyright       string `json:"copyright"`
+	Date            string `json:"date"`
+	Explanation     string `json:"explanation"`
+	Hdurl           string `json:"hdurl"`
+	Media_type      string `json:"media_type"`
+	Service_version string `json:"service_version"`
+	Title           string `json:"title"`
+	Url             string `json:"url"`
 }
 
 func main() {
@@ -33,7 +38,13 @@ func main() {
 		log.Fatal(jsonErr)
 	}
 
+	fmt.Println(Response.Copyright)
 	fmt.Println(Response.Date)
+	fmt.Println(Response.Explanation)
 	fmt.Println(Response.Hdurl)
+	fmt.Println(Response.Media_type)
+	fmt.Println(Response.Service_version)
+	fmt.Println(Response.Title)
+	fmt.Println(Response.Url)
 
 }
