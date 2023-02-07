@@ -21,12 +21,16 @@ func division(a, b int) int {
 }
 
 func validate(a, b int) string {
-	if a == b {
+	if equals(a, b) {
 		return "equal numbers"
 	}
 
 	return fmt.Sprintf("The greater of %v and %v, is: %v", a, b, greater(a, b))
 
+}
+
+func equals(c, d int) bool {
+	return c == d
 }
 
 func greater(a, b int) int {
