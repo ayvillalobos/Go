@@ -3,9 +3,7 @@ package main
 import (
 	"encoding/json"
 	"log"
-	"math/rand"
 	"net/http"
-	"strconv"
 
 	"github.com/gorilla/mux"
 )
@@ -31,7 +29,6 @@ func createBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content- Type", "application/json")
 	var book Book
 	json.NewDecoder(r.Body).Decode(&book)
-	book.ID = strconv.Itoa(rand.Intn(10000000))
 	books = append(books, book)
 	json.NewEncoder(w).Encode(book)
 
@@ -58,5 +55,6 @@ func main() {
 	r.HandleFunc("api/books/{id}", updateBook).Methods("PUT")
 	r.HandleFunc("/books/{id}", deleteBook).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8000", r))
+	log.Println("escuchando..")
 
 }
