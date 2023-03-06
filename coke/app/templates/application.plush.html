@@ -8,12 +8,11 @@
   <meta name="csrf-token" content="<%= authenticity_token %>" />
 
   <link rel="icon" href="/assets/images/favicon.png" type="image/png">
-  
   <%= stylesheetTag("application.css") %>
   <%= javascriptTag("application.js", {defer: true}) %>
 </head>
 <body class="h-full">
-	<main class="container-fluid ">
+	<main class="container mt-3">
 		<%= yield %>
 	</main>
 </body>

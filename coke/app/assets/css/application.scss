@@ -3,11 +3,15 @@
 
 // This is just some CSS for the welcome home landing page, feel free to 
 // remove it.
-.cont{
-height: 150px;
-}
+.welcome {
+    width: 700px;
+    margin: 0 auto;
+    
+    img { 
+        width: 300px;
+    }
 
-#colors{
-    background-color:#2B4873
+    h1 {
+        font-size: 2rem;
+    }
 }
-

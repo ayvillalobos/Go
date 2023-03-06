@@ -1,0 +1,63 @@
+<header class="navbar navbar-expand-lg bd-navbar sticky-top p-4 mb-2 bg-info text-emphasis-info text-center row">
+    <div class="col-md-4 d-flex">
+      <div class="col-md-4 border-end">
+        <a class="navbar-brand text-white fs-3" href="#">ToDo List</a>
+      </div>
+      <div class="col-md-5 text-white"> 4 Incompleted Tasks <br> Thursday 06, June 2019</div>
+    </div>
+  
+    <div class="col-md-4 ms-auto d-flex">
+      <div class="col-md-5"><button type="button" id="incomplet" class="btn btn-info text-white">Incomplete Tasks</button> </div>
+      <div class="col-md-4"><button type="button"id="task" class="btn btn-info text-white ">Complete Tasks</button></div>
+    </div>
+  </header>
+
+  <div class="d-flex justify-content-end w-75 m-auto">
+    <button type="button" class="border-0 py-2  btn-lg bg-info px-4 mt-3 text-white  justify-content-end">Add Task</button>
+</div>
+
+    <table class="table px-5 bg-white m-auto py-4 w-75 mt-3 shadow-sm">
+        <thead>
+          <tr id="colors" class="text-white fs-5">
+            <th scope="col"></th>
+            <th scope="col" class="w-50 py-4">Task</th>
+            <th scope="col" class="p-4">Complete By</th>
+            <th scope="col " class="p-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="fs-5">
+            <th scope="row"> <i class="bi bi-check-circle mx-4"></i></th>
+            <td class="text-info">Client Meting</td>
+            <td>08 Mayo 2019</td>
+            <td>
+                <i class="bi bi-pencil mx-3"></i>
+                <i class="bi bi-trash3 mx-4 text-danger-emphasis"></i></td>
+          </tr>
+          <tr class="fs-5">
+            <th scope="row"> <i class="bi bi-check-circle mx-4"></i></th>
+            <td class="text-info">Design App Interface</td>
+            <td>08 Mayo 2019</td>
+            <td>
+                <i class="bi bi-pencil mx-3"></i>
+                <i class="bi bi-trash3 mx-4 text-danger-emphasis"></i></td>
+          </tr>
+          <tr class="fs-5">
+            <th scope="row"> <i class="bi bi-check-circle mx-4"></i></th>
+            <td colspan="2" class="text-info">Learn Node.Js</td>
+           
+          
+            <td>
+                <i class="bi bi-pencil mx-3"></i>
+                <i class="bi bi-trash3 mx-4 text-danger-emphasis"></i></td>
+          </tr>
+          <tr class="fs-5">
+            <th scope="row"> <i class="bi bi-check-circle mx-4"></i></th>
+            <td class="text-info">Bring the puppy out XD</td>
+            <td>Thornton</td>
+            <td>
+                <i class="bi bi-pencil mx-3"></i>
+                <i class="bi bi-trash3 mx-4 text-danger-emphasis"></i></td>
+          </tr>
+        </tbody>
+      </table>

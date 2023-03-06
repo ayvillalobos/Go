@@ -25,7 +25,7 @@ func main() {
 func ShowBooks(w http.ResponseWriter, r *http.Request) {
 	book := Book{"Building Web Apps with Go", "Jeremy Saenz"}
 
-	fp := path.Join("template1", "index.html")
+	fp := path.Join("template1", "index2.html")
 	tmpl, err := template.ParseFiles(fp)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -39,7 +39,7 @@ func ShowBooks(w http.ResponseWriter, r *http.Request) {
 func DeleteBook(w http.ResponseWriter, r *http.Request) {
 	book := Book{"Building Web Apps with Go", "Jeremy Saenz"}
 
-	fp := path.Join("template1", "index2.html")
+	fp := path.Join("template1", "index.html")
 	tmpl, err := template.ParseFiles(fp)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

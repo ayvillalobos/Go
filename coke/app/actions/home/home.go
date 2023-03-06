@@ -16,11 +16,3 @@ var (
 func Index(c buffalo.Context) error {
 	return c.Render(http.StatusOK, r.HTML("home/index.plush.html"))
 }
-
-func edit(c buffalo.Context) error {
-	return c.Render(http.StatusOK, r.HTML("home/edit.plush.html"))
-}
-
-func list(c buffalo.Context) error {
-	return c.Render(http.StatusOK, r.HTML("home/list.plush.html"))
-}

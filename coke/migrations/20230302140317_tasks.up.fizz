@@ -1,0 +1,6 @@
+create_table("tasks"){
+    t.column("id", "uuid",{primary:true})
+    t.column("task", "string",{})
+    t.column("limit_date", "date",{})
+    t.column("description", "string",{})
+}
